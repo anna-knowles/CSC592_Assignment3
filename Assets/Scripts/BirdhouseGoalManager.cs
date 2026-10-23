@@ -6,10 +6,8 @@ public class BirdhouseGoalManager : MonoBehaviour
 {
     public GameObject[] goals;
     private int currentGoal = 0;
-
     public TMP_Text instructionText;
     public string[] instructions;
-
     public ParticleSystem fireworks;
 
     void Start()
