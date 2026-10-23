@@ -11,6 +11,8 @@ public class CheckPuzzle : MonoBehaviour
     // The target puzzle goal
     public Transform targetPuzzle;
 
+    public BirdhouseGoalManager goalManager;
+
     // Boolean variable to indicate whether this puzzle is solved or not
     public bool isSolved;
 
@@ -48,6 +50,8 @@ public class CheckPuzzle : MonoBehaviour
             // We make this game object have same  position and rotation value with the target puzzle goal
             transform.SetPositionAndRotation(targetPuzzle.position, targetPuzzle.rotation);
             targetPuzzle.gameObject.SetActive(false);
+
+            goalManager.AdvanceGoal();
 
             // To fix it on the position, we set the rigidbody. Freeze both position and rotation
             // It makes the virtual object keep position and rotation, regardless of physics calculation
